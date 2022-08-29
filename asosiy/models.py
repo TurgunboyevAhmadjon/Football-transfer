@@ -14,9 +14,9 @@ class Clubs(models.Model):
 
 class Player(models.Model):
     ism = models.CharField(max_length=100)
-    yosh = models.IntegerField()
+    yosh = models.IntegerField(blank=True)
     davlat = models.CharField(max_length=50)
-    pozitsiya = models.IntegerField()
+    pozitsiya = models.CharField(max_length=100)
     narx = models.IntegerField()
     club = models.ForeignKey(Clubs, on_delete=models.CASCADE)
     def __str__(self):

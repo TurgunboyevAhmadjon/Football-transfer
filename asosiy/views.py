@@ -57,7 +57,8 @@ class SeasonView(View):
 class Country_clubsView(View):
     def get(self, request):
         data = {
-            'country-clubs': Player.objects.all()
+            'clubs': Clubs.objects.all(),
+            'clublar': Player.objects.all()
         }
         return render(request, 'country-clubs.html', data)
 

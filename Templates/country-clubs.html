@@ -66,7 +66,7 @@
           </a>
         </div>
         <div class="links">
-          <div class="navActive"><a href="#">CLUBS</a></div>
+          <div class="navActive"><a href="/clubs/">CLUBS</a></div>
           <div><a href="/latest-transfers/">LATEST TRANSFERS</a></div>
           <div><a href="/players/">PLAYERS</a></div>
           <div><a href="/U-players/">U-20 PLAYERS</a></div>
@@ -99,7 +99,7 @@
         </div>
       </div>
       <div class="nav">
-        <h2>– Football Club Manchester City –</h2>
+        <h2>– Football Club  –</h2>
         <table class="content-nav">
           <thead>
             <tr>
@@ -113,15 +113,16 @@
             </tr>
           </thead>
         </table>
+
       </div>
       <div class="content">
         <table class="players">
-          {% for i in lates %}
+          {% for i in clublar %}
           <tr>
-            <td>{{i.player}}</td>
-            <td>{{i.position}}</td>
-            <td>{{i.millat}}</td>
-            <td>{{i.transfer_qiymat}}</td>
+            <td>{{i.ism}}</td>
+            <td>{{i.pozitsiya}}</td>
+            <td>{{i.davlat}}</td>
+            <td>{{i.narx}}</td>
           </tr>
           {% endfor %}
         </table>
