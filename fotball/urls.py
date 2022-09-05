@@ -2,10 +2,12 @@ from django.contrib import admin
 from django.urls import path
 from asosiy.views import *
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', TopFootballView.as_view()),
     path('clubs/', ClubsView.as_view(), name='clubs'),
+    path('clubs/<int:pk>/', ClubsView.as_view(), name='clubs'),
     path('latest-transfers/', LatestTransferView.as_view()),
     path('players/', PlayersView.as_view()),
     path('U-players/', U_PlayersView.as_view()),

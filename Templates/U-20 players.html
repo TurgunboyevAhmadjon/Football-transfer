@@ -110,84 +110,14 @@
         </div>
       <div class="content">
         <table class="players">
+          {% for i in U20 %}
           <tr>
-            <td>1 Pedri</td>
-            <td>18</td>
-            <td>Barcelona</td>
-            <td>120</td>
+            <td>{{i.ism}}</td>
+            <td>{{i.yosh}}</td>
+            <td>{{i.club}}</td>
+            <td>{{i.narx}}</td>
           </tr>
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Pedri</td>-->
-<!--            <td>18</td>-->
-<!--            <td>Barcelona</td>-->
-<!--            <td>120</td>-->
-<!--          </tr>-->
+          {% endfor %}
         </table>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta

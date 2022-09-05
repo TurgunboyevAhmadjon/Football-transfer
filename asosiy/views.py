@@ -7,24 +7,34 @@ class TopFootballView(View):
         return render(request, 'index.html')
 
 class ClubsView(View):
-    def get(self, request):
+    def get(self, request, pk):
+        club = Clubs.objects.filter(id=pk)
         data = {
-            'clubs': Clubs.objects.all(),
+            'clubs': club,
             'players': Player.objects.all()
         }
         return render(request, 'clubs.html', data)
 
 class LatestTransferView(View):
     def get(self, request):
-        return render(request, 'latest-transfers.html')
+        data = {
+            'transfer': Transfers.objects.all()
+        }
+        return render(request, 'latest-transfers.html', data)
 
 class PlayersView(View):
     def get(self, request):
-        return render(request, 'players.html')
+        data = {
+            'players': Player.objects.all().order_by('-narx')
+        }
+        return render(request, 'players.html', data)
 
 class U_PlayersView(View):
     def get(self, request):
-        return render(request, 'U-20 players.html')
+        data = {
+            'U20': Player.objects.filter(yosh__lte=20).order_by('-narx')
+        }
+        return render(request, 'U-20 players.html', data)
 
 class TryoutsView(View):
     def get(self, request):
@@ -40,7 +50,10 @@ class AboutView(View):
 
 class EnglandView(View):
     def get(self, request):
-        return render(request, 'england.html')
+        data = {
+            'clubs': Clubs.objects.filter(davlat__startswith='Eng')
+        }
+        return render(request, 'england.html', data)
 
 class NetherlandsView(View):
     def get(self, request):
@@ -57,8 +70,7 @@ class SeasonView(View):
 class Country_clubsView(View):
     def get(self, request):
         data = {
-            'clubs': Clubs.objects.all(),
-            'clublar': Player.objects.all()
+            'player': Player.objects.all().order_by('-narx')
         }
         return render(request, 'country-clubs.html', data)
 
@@ -84,4 +96,7 @@ class Transfer_archiveView(View):
 
 class Transfer_recordsView(View):
     def get(self, request):
-        return render(request, 'transfer-records.html')
+        data = {
+            'record': Transfers.objects.filter(narx__gte=50).order_by('-narx')
+        }
+        return render(request, 'transfer-records.html', data)

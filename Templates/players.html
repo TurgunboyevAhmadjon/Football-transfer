@@ -103,39 +103,14 @@
     </div>
     <div class="content">
         <table class="playerss">
+          {% for i in players %}
           <tr>
-            <td>1 Kylian Mbappé</td>
-            <td>PSG</td>
-            <td>175</td>
+            <td>{{i.ism}}</td>
+            <td>{{i.club}}</td>
+            <td>{{i.narx}}</td>
           </tr>
-<!--          <tr>-->
-<!--            <td>1 Kylian Mbappé</td>-->
-<!--            <td>PSG</td>-->
-<!--            <td>175</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Kylian Mbappé</td>-->
-<!--            <td>PSG</td>-->
-<!--            <td>175</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Kylian Mbappé</td>-->
-<!--            <td>PSG</td>-->
-<!--            <td>175</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Kylian Mbappé</td>-->
-<!--            <td>PSG</td>-->
-<!--            <td>175</td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>1 Kylian Mbappé</td>-->
-<!--            <td>PSG</td>-->
-<!--            <td>175</td>-->
-<!--          </tr>-->
-          
+          {% endfor %}
           </table>
-        
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta sequi quia eos cupiditate rerum accusantium odit enim, expedita, architecto error dignissimos voluptatibus. Nisi illo, maiores fugit amet neque eveniet!</p>
       </div>
       <div class="footer state-footer">

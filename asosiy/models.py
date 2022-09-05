@@ -27,9 +27,8 @@ class Transfers(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     all_from = models.ForeignKey(Clubs, on_delete=models.CASCADE, related_name='al_from')
     all_to = models.ForeignKey(Clubs, on_delete=models.CASCADE, related_name='al_to')
-    tah_narx = models.IntegerField()
     narx = models.IntegerField()
-    mavsum = models.CharField(max_length=200)
+    mavsum = models.CharField(max_length=200, blank=True)
     def __str__(self):
         return self.mavsum
 
